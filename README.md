@@ -26,4 +26,7 @@ Linux-Learning/
 │   └── backup.sh
 └── README.md
 
+## 📌 Note
+I studied Linux consistently before starting this log.
+Daily logging begins here to keep track of progress going forward.
 
