@@ -81,3 +81,26 @@ Daily logging begins here to keep track of progress going forward.
     - Learned the importance of using full absolute paths when copying system files
     - Confirmed successful file transfers by listing contents after copying
 
+**Entry 3**
+- Focus: Managing running processes, understanding processes, listing processes
+- Command / Concepts: 
+    - `ps u`
+    - `ps ux | less`
+    - `ps uax | less`
+    - `ps -eo`
+    - listing and changing processes with htop
+    
+- Practice:
+    - List all processes running on my system, showing a full set of columns
+        - `ps u`
+    - sort those processes by the name of the user
+        - `ps u --sort=-user | less`
+    - List all display the following columns: process ID, username, group name, virtual memory size, resident memory size, and the command.
+        - `ps -eo pid,user,group,vsz,rss,comm | head`
+    - Run the htop command to view processes running on my system. Go back and forth between CPU and memory.
+        - `htop` - M keybind to switch to memory
+        
+- Notes / Issues:
+    - VSZ shows the size of the image process, the amount of memory allocated for the process.
+    - RSS shows the size of the program in memory, the amount that is actually being used.
+    
