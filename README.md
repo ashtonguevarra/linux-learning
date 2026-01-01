@@ -162,3 +162,58 @@ jobs, fg, and bg only work with processes started from the current shell
     - bash -x myscript prints each command as it runs and is useful for debugging.
     - ${VAR:-"Not Set"} assigns a default value when a variable is unset or empty.
     - File extensions like .sh are optional; execution depends on permissions and the shebang.
+
+##
+**Entry 7**
+
+### Focus
+Bash parameter expansion, arithmetic operations, command history, script execution, and file permissions.
+
+### Commands / Concepts
+- Clearing the terminal and using `history`
+- Variable assignment and expansion
+- Filename parsing using parameter expansion:
+  - `${VAR##*/}` – extract filename
+  - `${VAR%/*}` – extract directory path
+  - `${VAR%.*}` – remove file extension
+  - `${VAR##*.}` – extract file extension
+- Integer arithmetic methods:
+  - `let`
+  - `expr`
+  - `bc`
+- Increment operators:
+  - `++I` (pre-increment)
+  - `I++` (post-increment)
+- Script execution and debugging:
+  - `./script`
+  - `bash -x script`
+- File permissions and ownership:
+  - `chmod`
+  - `chown`
+- Using `~/bin` for user scripts
+
+### Practice
+- Defined `MYFILENAME` and extracted:
+  - filename
+  - directory path
+  - base name
+  - file extension
+- Verified variable expansion using `echo`
+- Performed arithmetic division on `BIGNUM=1024` using:
+  - `let`
+  - `expr`
+  - `bc`
+- Generated random numbers using `$RANDOM`
+- Tested pre-increment vs post-increment behavior
+- Created and executed `ifthen.sh`
+- Debugged script execution with `bash -x`
+- Set executable permissions with `chmod 755`
+- Moved script to `~/bin` and renamed it
+- Verified permissions and ownership using `ls -ld` and `chown`
+
+### Notes
+- Parameter expansion is faster and safer than external commands
+- `bc` requires variables to be expanded (e.g. `echo "$BIGNUM / 16" | bc`)
+- `++I` increments before evaluation, `I++` increments after evaluation
+- Scripts must have execute permission to run directly
+- `~/bin` is a standard location for personal scripts included in `PATH`
