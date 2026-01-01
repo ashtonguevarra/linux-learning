@@ -164,7 +164,7 @@ jobs, fg, and bg only work with processes started from the current shell
     - File extensions like .sh are optional; execution depends on permissions and the shebang.
 
 ##
-**Entry 7**
+# **Entry 7**
 
 ### Focus
 Bash parameter expansion, arithmetic operations, command history, script execution, and file permissions.
