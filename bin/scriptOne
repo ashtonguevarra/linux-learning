@@ -1,6 +1,0 @@
-STRING="Friday"
-if [ $STRING = "Monday" ] ; then
-echo "whoohoo. Friday!"
-else 
-echo "Will Friday ever get there?"
-fi

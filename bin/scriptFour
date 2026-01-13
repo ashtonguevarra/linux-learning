@@ -1,5 +1,0 @@
-# [ test ] || action
-# Perform simple single command if test is false
-
-dirname="/tmp/testdir"
-[ -d "$dirname" ] || mkdir "$dirname" && echo "done"

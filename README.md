@@ -480,5 +480,3 @@ Using `sed` for text processing, stream editing and redirection, command history
 - Storing data in hidden files keeps user directories clean
 
 
-
-

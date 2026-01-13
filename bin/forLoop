@@ -1,3 +1,0 @@
-for NAME in Tonee Tonee Tonee ; do
-    echo $NAME is my wife
-done
