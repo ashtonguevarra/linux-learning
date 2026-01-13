@@ -421,6 +421,64 @@ Using `for` loops to process multiple files, renaming files safely, understandin
 - Scripts that modify files should include safeguards to avoid acting on unintended directories
 - Renaming logic should check whether source and destination filenames differ before calling `mv`
 
+## **Entry 12**
+
+### Focus
+Using `sed` for text processing, stream editing and redirection, command history reuse, and building a simple Bash phone list utility with arguments, conditionals, and file storage.
+
+### Commands / Concepts
+- `sed`
+- `touch`
+- `cat`
+- Redirection (`>`)
+- Pipes (`|`)
+- `rm`
+- `history`, `!n`
+- `grep`
+- `vim`
+- `chmod`
+- Script arguments (`$1`, `$2`, `$3`)
+- `shift`
+- Conditional tests
+- Exit codes
+- `bash -x`
+
+### Practice
+- Used `sed -n '/home/p' /etc/passwd` to print matching lines
+- Created temporary files for text manipulation practice
+- Replaced strings using:
+  - `sed 's/Mac/Linux/g'`
+- Removed trailing whitespace using:
+  - `sed 's/ *$//'`
+- Redirected output to new files instead of modifying originals
+- Compared direct `sed` usage vs piping input from `cat`
+- Opened files in `vim` to verify changes
+- Removed temporary files after testing
+- Reused commands from history using `!n`
+- Observed errors when running commands on deleted files
+
+- Created a script named `telephoneList`, later renamed to `ph`
+- Set executable permissions with `chmod`
+- Executed the script interactively and via command-line arguments
+- Implemented a phone list stored in `~/.phonelist.txt`
+- Added new entries using:
+  - `./ph new "Name" number`
+- Queried existing entries using:
+  - `./ph name`
+- Used `grep -i` for case-insensitive searching
+- Used `grep -q` to test for matches without output
+- Debugged script logic using `bash -x`
+- Verified correct behavior for missing and existing entries
+
+### Notes
+- `sed` processes input streams and does not modify files unless redirected
+- Redirection (`>`) overwrites files; missing input files cause errors
+- `!n` reruns a command from history by number
+- Scripts should validate argument count before processing
+- `shift` is useful for handling subcommands like `new`
+- `bash -x` is essential for tracing script logic and argument handling
+- Storing data in hidden files keeps user directories clean
+
 
 
 
