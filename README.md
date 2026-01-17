@@ -500,16 +500,15 @@ Creating and executing a custom Bash script to display system information such a
 - Executed the script directly from the terminal
 - Displayed system information using a Bash script
 
-#### Script: `myownscrpt`
+#### Script: `myownscript`
 ```bash
-#!/bin/bash
-#Displays date/time, current working directory, and hostname.
+# !/bin/bash
+# Displays, date/time, current working directory, and hostname.
 
-DATE=$(date)
-DIRECTORY=$(pwd)
-HOST=$(hostname)
+DATE=`date`
+DIRECTORY=/home/ashton
+HOST="abc.example.com"
 
 echo "Today is $DATE."
 echo "You are in $DIRECTORY and your host is $HOST."
-
 
