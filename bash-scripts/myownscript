@@ -1,0 +1,9 @@
+# !/bin/bash
+# Displays, date/time, current working directory, and hostname.
+
+DATE=`date`
+DIRECTORY=/home/ashton
+HOST="abc.example.com"
+
+echo "Today is $DATE."
+echo "You are in $DIRECTORY and your host is $HOST."

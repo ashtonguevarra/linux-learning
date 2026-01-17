@@ -1,5 +1,0 @@
-for file in * ; do
-	f=`echo $file | tr [:blank:] [_]`
-	[ "$file" = "$F" ] || mv -i -- "$file" "$f"
-done
-

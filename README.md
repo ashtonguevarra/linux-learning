@@ -479,4 +479,37 @@ Using `sed` for text processing, stream editing and redirection, command history
 - `bash -x` is essential for tracing script logic and argument handling
 - Storing data in hidden files keeps user directories clean
 
+## **Entry 13**
+
+### Focus
+Creating and executing a custom Bash script to display system information such as date, time, current directory, and hostname.
+
+### Commands / Concepts
+- `chmod`
+- `./scriptName`
+- Execute permissions (`755`)
+- Command substitution
+- `date`
+- `pwd`
+- `hostname`
+- Environment awareness
+
+### Practice
+- Set execute permissions on a custom script using:
+  - `chmod 755 myownscrpt`
+- Executed the script directly from the terminal
+- Displayed system information using a Bash script
+
+#### Script: `myownscrpt`
+```bash
+#!/bin/bash
+#Displays date/time, current working directory, and hostname.
+
+DATE=$(date)
+DIRECTORY=$(pwd)
+HOST=$(hostname)
+
+echo "Today is $DATE."
+echo "You are in $DIRECTORY and your host is $HOST."
+
 

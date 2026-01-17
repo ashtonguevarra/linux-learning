@@ -1,5 +1,0 @@
-N=0
-while [ $N -lt 10 ] ; do
-      echo -n $N
-      let N=$N+1
-done

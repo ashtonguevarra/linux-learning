@@ -1,4 +1,0 @@
-VARIABLE=1
-if [ $VARIABLE -eq 1 ] ; then
-	echo "The variable is 1"
-fi
