@@ -511,4 +511,41 @@ HOST="abc.example.com"
 
 echo "Today is $DATE."
 echo "You are in $DIRECTORY and your host is $HOST."
+   ```
+## **Entry 14**
 
+### Focus 
+Understanding positional parameters by writing a shell script.
+
+### Commands / Concepts
+- `cd`
+- `chmod 755`
+- `./pp`
+- `./pp par1 par2 par3`
+- Positional Parameters (`$1`,`$2`,`$3`)
+- Special Parameters (`$#`,`$@`)
+- Setting variables
+- Arguments in command line
+
+### Practice
+- Set execute permission on script `pp`
+- Execute script from inside `~/bin`
+- Write a Bash script that reads, counts, and displays three parameters
+
+### Script
+
+``` bash
+
+#!/bin/bash 
+# Script that reads in three special parameters in the command line
+
+ONE=$1 
+TWO=$2 
+THREE=$3 
+echo "There are $# parameters that include: $@" 
+echo "The first is $ONE, the second is $TWO, the third is $THREE."
+
+```
+
+### Notes 
+- Positional parameters are empty when arguments are not provided.

@@ -1,0 +1,13 @@
+#!/bin/bash
+# Script that reads in three special parameters in the command line
+
+ONE=$1
+TWO=$2
+THREE=$3
+echo "There are $# parameters that include: $@"
+echo "The first is $ONE, the second is $TWO, the third is $THREE."
+
+if [ $# -ne 3 ]; then
+  echo "Usage: ./pp <param1> <param2> <param3>"
+  exit 1
+fi
