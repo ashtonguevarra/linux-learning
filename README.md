@@ -549,3 +549,48 @@ echo "The first is $ONE, the second is $TWO, the third is $THREE."
 
 ### Notes 
 - Positional parameters are empty when arguments are not provided.
+
+## **Entry 15**
+
+### Focus
+Using `read`, user input, and conditional statements in Bash scripting.
+
+### Commands / Concepts
+- `read`
+- `echo`
+- Variables
+- `if`, `else`, `fi`
+- String comparison (`=`)
+
+### Practice
+- Prompt the user for multiple inputs
+- Store input in variables
+- Use conditional logic to respond to user input
+
+### Script 1: Street and Town Input
+
+```bash
+#!/bin/bash
+# Prompts name of the street and town that you grew up on
+
+read -p "Write the street and town you grew up on: " mystreet mytown
+
+echo "The street I grew up on was $mystreet and the town was $mytown"
+ 
+```
+### Script 2:
+
+``` bash
+#!/bin/bash
+# Asks your favorite operating system
+
+read -p "Which is you favorite operating system? " OS
+
+if [ $OS = "linux" ] ; then
+    echo "you are a goat!"
+else
+    echo "not so gigachad of you lol"
+fi
+
+```
+

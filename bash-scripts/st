@@ -1,0 +1,6 @@
+#!/bin/bash
+# Prompts name of the street and town that you grew up on
+
+read -p "Write the town and street you grew up on: " mystreet mytown
+
+echo "The street I grew up on was $mystreet and the town was $mytown"

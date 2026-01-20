@@ -1,0 +1,10 @@
+#!/bin/bash
+# Asks your favorite operating system
+
+read -p "Which is you favorite operating system? " OS
+
+if [ $OS = "linux" ] ; then
+    echo "you are a goat!"
+else
+    echo "not so gigachad of you lol"
+fi
