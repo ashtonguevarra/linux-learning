@@ -1,0 +1,6 @@
+#!/bin/bash
+# for loop
+
+for ANIMAL in moose cow goose sow ; do
+    echo I have a $ANIMAL.
+done

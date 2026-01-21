@@ -1,0 +1,6 @@
+#!/bin/bash
+# a for loop for tonee
+
+for TONEE in beautiful pretty pink sweet kind ; do
+    echo Tonee is $TONEE
+done
