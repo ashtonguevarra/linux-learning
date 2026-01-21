@@ -594,3 +594,49 @@ fi
 
 ```
 
+## **Entry 17**
+
+### Focus
+Using a **for loop** in Bash to iterate over a list of values and display formatted output.
+
+### Commands / Concepts
+- `for` loop 
+- Loop variable 
+- `do` / `done` 
+- `bash -x` (debug mode)
+
+### Practice
+- Create a Bash script named `fltonee`
+- Make the script executable
+- Use a `for` loop to iterate through descriptive words
+- Display output using a loop variable
+
+### Script
+
+```bash
+#!/bin/bash
+# a for loop for tonee
+
+for TONEE in beautiful pretty pink sweet kind ; do
+    echo "Tonee is $TONEE"
+done
+```
+
+### Sample Output
+
+``` bash
+Tonee is beautiful
+Tonee is pretty
+Tonee is pink
+Tonee is sweet
+Tonee is kind
+```
+
+### Notes
+- The for loop runs once for each word in the list.
+- The variable TONEE stores the current value in each iteration.
+- bash -x fltonee helps trace execution for debugging.
+
+
+
+
