@@ -637,6 +637,48 @@ Tonee is kind
 - The variable TONEE stores the current value in each iteration.
 - bash -x fltonee helps trace execution for debugging.
 
+## **Entry 18**
+
+### Focus
+Managing system services using `systemctl` and checking logs through Cockpit.
+
+### Commands / Concepts 
+- `systemctl enable --now`
+- Systemd services and sockets
+- Root authentication
+- `su` (switch user)
+- Cockpit service
+- Viewing system logs
+
+### Practice 
+- Enable and start the Cockpit socket
+- Authenticate as root to manage system services
+- Switch to root and exit safely
+- Verify service activity and logs using Cockpit
+
+### Commands Executed 
+
+```bash
+systemctl enable --now cockpit.socket
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-unit-files ====
+Authentication is required to manage system service or unit files.
+Authenticating as: root
+==== AUTHENTICATION COMPLETE ====
+
+```
+
+``` bash
+su
+exit
+
+```
+
+### Notes
+
+- enable --now enables the service at boot and starts it immediately
+- Cockpit provides a web-based interface for monitoring and logs
+- Always exit root after completing administrative tasks
+
 
 
 
