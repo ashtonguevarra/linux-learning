@@ -22,8 +22,12 @@ My goal is to build strong Linux fundamentals for Cloud / DevOps roles.
 Linux-Learning/
 ├── README.md
 └── bash-scripts/
-    └── bin
-
+     ├── afl
+     ├── fltonee
+     ├── myos
+     ├── myownscript
+     ├── pp
+     └── st
 ```
 ## 📌 Note
 I studied Linux consistently before starting this log.
@@ -679,6 +683,34 @@ exit
 - Cockpit provides a web-based interface for monitoring and logs
 - Always exit root after completing administrative tasks
 
+## **Entry 19**
 
+### Focus
+Using Cockpit browser-based administration, Using the root user account, su command, gaining administritive access with sudo, Exploring administritive commands, configuration files and log files
 
+### Command / Concepts
+
+- `touch`/`rm`- add and remove files
+- `ls`/`cd` - navigating directories and viewing contents 
+- `sudo` - run commands and elevated privileges
+- `httpd -t` - apache management
+- `vim` - edit configuration files
+- `journalctl` - view system logs
+- `$HOME` - environment variable
+
+### Practice 
+
+- Explore `/etc` for configuration files (sudo vim `/etc/sudoers`, `/etc/systemd`, `/etc/skel`)
+- View system logs using journalctl and filter by service or priority
+- Test Apache configuration with `httpd -t`
+- Navigate directories and list contents to locate files and directories
+- Authenticate as root and switch back safely
+
+### Notes
+
+- Cockpit allows monitoring services and system health through a web interface.
+- Always use sudo for commands that modify system files or services.
+- Use su carefully—remaining root unnecessarily can be risky.
+- Log inspection (journalctl) is crucial for debugging services and tracking system issues.
+- System directories like /usr/sbin, /sbin, and /etc contain binaries, configuration, and administrative files important for system management.
 
