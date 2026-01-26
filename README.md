@@ -714,3 +714,26 @@ Using Cockpit browser-based administration, Using the root user account, su comm
 - Log inspection (journalctl) is crucial for debugging services and tracking system issues.
 - System directories like /usr/sbin, /sbin, and /etc contain binaries, configuration, and administrative files important for system management.
 
+
+## **Entry 20**
+
+### Focus
+Inspecting Kernel Messages, System hardware, and device information using built-in Linux utilities
+
+### Commands / Concepts
+- `dmesg`- kernel ring buffer
+- `less` - pages output
+- `lspci -v`- pci device inspection
+- `lspusb`- usb device listing
+- `lscpu`- cpu details
+
+### Practice
+- View kernel messages with root privileges
+- Page long kernel output using `less`
+- View PCI devices 
+- List all connected USB devices
+- Display CPU details
+
+### Notes 
+- Use `sudo dmesg` for full kernel access
+
