@@ -737,3 +737,27 @@ Inspecting Kernel Messages, System hardware, and device information using built-
 ### Notes 
 - Use `sudo dmesg` for full kernel access
 
+
+## **Entry 21**
+
+### Focus
+System logging and log persistence management using **systemd-journald**.
+
+### Commands / Concepts
+* `journalctl` — Base command to query and display logs from the systemd journal.
+* `journalctl -k` — Display **kernel** messages only (equivalent to dmesg).
+* `journalctl -b` — Show logs specifically from the **current boot**.
+* `journalctl --list-boots` — List all archived boot sessions available in the journal.
+* `journalctl _SYSTEMD_UNIT=sshd.service` — Filter logs to show only a **specific service**.
+* `journalctl PRIORITY=0` — Filter by **severity level** (0=emerg, 3=err, 4=warning, 6=info).
+* `journalctl -f` — **Follow** log output in real-time (live tail functionality).
+* `journalctl -a` — Display all data, including long lines and unprintable characters.
+
+### Practice
+* **Boot Analysis:** Ran `--list-boots` to see historical data and used `-b` to isolate logs from specific system sessions.
+* **Service Debugging:** Filtered by `sshd.service` to monitor connection attempts and authentication logs.
+* **Real-time Troubleshooting:** Combined `-a` and `-f` to monitor full-verbosity system events as they occurred.
+
+### Notes
+> [!NOTE]
+> Unlike traditional syslog files in `/var/log/`, the systemd journal is stored in a **binary format**. This necessitates the use of `journalctl` but allows for high-speed filtering by metadata like PID, UID, or Unit name without manual parsing.
