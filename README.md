@@ -761,3 +761,27 @@ System logging and log persistence management using **systemd-journald**.
 ### Notes
 > [!NOTE]
 > Unlike traditional syslog files in `/var/log/`, the systemd journal is stored in a **binary format**. This necessitates the use of `journalctl` but allows for high-speed filtering by metadata like PID, UID, or Unit name without manual parsing.
+
+## **Entry 22**
+
+### Focus
+Kernel module inspection and metadata retrieval using **kmod** utilities.
+
+### Commands / Concepts
+* `lsmod` — Lists all currently loaded kernel modules by reading `/proc/modules`.
+* `modinfo` — Displays detailed information about a specific kernel module.
+* `modinfo -d` — Extracts the **description** field of a module to understand its purpose.
+* `modinfo -n` — Displays the **filename/path** of the module (typically a `.ko.xz` or `.ko.gz` file).
+* `modinfo -a` — Displays the **author** of the module.
+
+### Practice
+* **Module Inventory:** Used `lsmod` to observe the relationship between modules and their dependencies (Used by).
+* **Hardware Driver Inspection:** Investigated specific drivers to identify their function:
+    * `e1000`: Intel PRO/1000 network driver.
+    * `rfkill`: Radio frequency switch filtering support.
+    * `ttm`: GPU memory management (Translation Table Manager).
+* **Path Identification:** Used the `-n` flag to locate the physical location of the `ttm` module within the system directory.
+
+### Notes
+> [!NOTE]
+> Kernel modules are "on-demand" pieces of code. `lsmod` only shows what is active in memory, while `modinfo` can query any module found in `/lib/modules/$(uname -r)/`, regardless of whether it is currently loaded.
